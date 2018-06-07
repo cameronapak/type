@@ -1,0 +1,42 @@
+* {
+  color: rgb(80,80,80);
+}
+
+.title {
+  margin: 40px 0;
+  -webkit-user-select: none;  /* Chrome 49+ */
+  -moz-user-select: none;     /* Firefox 43+ */
+  user-select: none;          /* Likely future */
+}
+
+.out-of-focus {
+  font-size: 20px;
+  color: rgb(80, 80, 80);
+  opacity: 0.3;
+}
+
+.out-of-focus:focus {
+  opacity: 1;
+}
+
+.textarea {
+  background-color: transparent;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 100;
+  color: rgb(80,80,80);
+  height: auto;
+}
+
+.textarea:focus,
+.textarea:active {
+  border: none;
+  outline: 0;
+}
+
+/* adds placeholder text */
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: lightgrey;
+}
