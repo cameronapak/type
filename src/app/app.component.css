@@ -7,6 +7,7 @@
   -webkit-user-select: none;  /* Chrome 49+ */
   -moz-user-select: none;     /* Firefox 43+ */
   user-select: none;          /* Likely future */
+  animation: yourAnimation 1s forwards 0s ease;
 }
 
 .out-of-focus {
@@ -39,4 +40,15 @@
   content: attr(placeholder);
   display: block; /* For Firefox */
   color: lightgrey;
+}
+
+@keyframes yourAnimation{
+    0%{
+        transform: rotate(0) translateY(-100px);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0px);
+        opacity: 1;
+        }
 }
